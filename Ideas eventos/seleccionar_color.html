@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Evento Change</title>
+</head>
+<body>
+    <label for="color">Elige un color:</label>
+    <select id="color">
+        <option value="red">Rojo</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+    </select>
+
+    <h1 id="titulo">Mira cómo cambia el color de este título</h1>
+
+    <script>
+        const colorSelect = document.getElementById('color');
+        const titulo = document.getElementById('titulo');
+
+        colorSelect.addEventListener('change', function() {
+            // Cambia el color del título basado en el valor seleccionado
+            titulo.style.color = colorSelect.value;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Resize</title>
+    <style>
+        #mensaje {
+            font-size: 24px;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mensaje">Ajusta el tamaño de la ventana para ver el cambio</div>
+
+    <script>
+        const mensaje = document.getElementById('mensaje');
+        
+        window.addEventListener('resize', function() {
+            let width = window.innerWidth;
+            
+            // Cambia el mensaje según el ancho de la ventana
+            if (width < 600) {
+                mensaje.textContent = 'La ventana es muy pequeña';
+                mensaje.style.color = 'red';
+            } else {
+                mensaje.textContent = 'Tamaño de ventana adecuado';
+                mensaje.style.color = 'green';
+            }
+        });
+    </script>
+</body>
+</html>

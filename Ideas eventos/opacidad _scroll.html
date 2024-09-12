@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Scroll Event Progresivo</title>
+    <style>
+        body {
+            height: 2000px; /* Para poder hacer scroll en la página */
+        }
+        h1 {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 36px;
+            transition: font-size 0.5s ease;
+            color: red; /* Color final */
+            opacity: 0; /* Iniciamos con el título transparente */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Desplaza hacia abajo</h1>
+
+    <script>
+        // Evento que se dispara cuando el usuario hace scroll en la ventana
+        window.addEventListener('scroll', function() {
+            const titulo = document.getElementById('titulo');
+            
+            // Obtenemos el valor del desplazamiento vertical
+            let scrollPos = window.scrollY;
+            
+            // Calculamos la opacidad en base al scroll (máximo de 1)
+            let opacityValue = Math.min(scrollPos / 300, 1);
+            
+            // Aplicamos la opacidad calculada al título
+            titulo.style.opacity = opacityValue;
+        });
+    </script>
+</body>
+</html>

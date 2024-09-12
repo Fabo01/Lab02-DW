@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Context Menu</title>
+    <style>
+        #contexto {
+            padding: 20px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <p id="contexto">Haz clic derecho aquí para ver el efecto.</p>
+
+    <script>
+        const contexto = document.getElementById('contexto');
+
+        contexto.addEventListener('contextmenu', function(event) {
+            event.preventDefault(); // Prevenir el menú contextual predeterminado
+            alert('Este es un menú contextual personalizado.');
+        });
+    </script>
+</body>
+</html>

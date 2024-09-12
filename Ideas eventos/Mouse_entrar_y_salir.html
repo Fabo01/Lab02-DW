@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Mouse Enter y Leave</title>
+    <style>
+        #caja {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja">Pasa el ratón aquí</div>
+
+    <script>
+        const caja = document.getElementById('caja');
+
+        caja.addEventListener('mouseenter', function() {
+            caja.style.backgroundColor = 'orange';
+            caja.textContent = '¡Entraste!';
+        });
+
+        caja.addEventListener('mouseleave', function() {
+            caja.style.backgroundColor = 'lightblue';
+            caja.textContent = 'Pasa el ratón aquí';
+        });
+    </script>
+</body>
+</html>

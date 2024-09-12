@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Doble Clic</title>
+    <style>
+        p {
+            cursor: pointer;
+            padding: 20px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <p id="parrafo">Haz doble clic aquí para cambiar el texto y el fondo</p>
+
+    <script>
+        const parrafo = document.getElementById('parrafo');
+
+        parrafo.addEventListener('dblclick', function() {
+            parrafo.textContent = 'Has hecho doble clic';
+            parrafo.style.backgroundColor = 'yellow';
+        });
+    </script>
+</body>
+</html>
