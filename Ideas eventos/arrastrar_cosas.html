@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Drag and Drop</title>
+    <style>
+        #drag {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            cursor: pointer;
+        }
+
+        #zona-drop {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #000;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="drag" draggable="true">Arrástrame</div>
+    <div id="zona-drop">Suelta aquí</div>
+
+    <script>
+        const dragElement = document.getElementById('drag');
+        const dropZone = document.getElementById('zona-drop');
+
+        dragElement.addEventListener('dragstart', function() {
+            console.log('Elemento arrastrado.');
+        });
+
+        dropZone.addEventListener('dragover', function(event) {
+            event.preventDefault(); // Necesario para permitir que se suelte
+            dropZone.style.backgroundColor = 'lightgreen';
+        });
+
+        dropZone.addEventListener('drop', function() {
+            dropZone.textContent = '¡Elemento soltado!';
+            dropZone.style.backgroundColor = 'lightblue';
+        });
+    </script>
+</body>
+</html>
