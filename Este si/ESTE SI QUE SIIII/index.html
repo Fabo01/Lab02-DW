@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra y Ventas de quesos Curicó 😘🧀</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="titulo">Compra y Ventas de quesos Curicó 😘🧀</h1>
+    </header>
+
+    <nav>
+        <a href="#productos">Productos</a>
+        <a href="#comentarios">Comentarios</a>
+    </nav>
+
+    <main class="container">
+
+        <article>
+            <h2>Historia del Queso Curicano</h2>
+            <p>El queso ha sido un pilar fundamental en la cultura gastronómica de Curicó. Con generaciones de artesanos dedicados a su producción, los quesos curicanos se destacan por su sabor y calidad. Hoy en día, ofrecemos una amplia variedad para satisfacer los paladares más exigentes.</p>
+        </article>
+
+        <section id="productos">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="queso1.png" alt="Producto 1">
+                    <h3>Queso en trozo</h3>
+                    <p>Queso mantecoso en trozo (el más vendido!!)</p>
+                    <p>Precio: $4.000</p>
+                    <button>Comprar</button> 
+                </div>
+                <div class="item">
+                    <img src="queso2.jpg" alt="Producto 2">
+                    <h3>Queso laminado</h3>
+                    <p>Queso ideal para sándwiches y comidas rápidas.</p>
+                    <p>Precio: $3.000</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="item">
+                    <img src="queso3.jpg" alt="Producto 3">
+                    <h3>Queso rallado</h3>
+                    <p>Perfecto para gratinar tus platos favoritos.</p>
+                    <p>Precio: $2.000</p>
+                    <button>Comprar</button> 
+                </div>
+            </div>
+        </section>
+
+        <section id="comentarios" class="comment-section">
+            <h2 class="section-title">Escribe si quieres vender o comprar quesos</h2>
+            <form action="#" method="post">
+                <textarea name="comentario" placeholder="Escribe aquí:"></textarea>
+                <br>
+                <input type="submit" value="Enviar Comentario">
+            </form>
+            <label for="color">Selecciona el color del título:</label>
+            <input type="color" id="color" name="color" value="#ffdd00">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Benjamin Parra (bparra2023@alu.uct.cl) - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
