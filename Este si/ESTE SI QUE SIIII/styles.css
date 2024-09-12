@@ -154,3 +154,29 @@ article p {
     background-color: #444;
     border-color: #666;
 }
+
+/* Estilo para el carrito de compras */
+.carrito {
+    background-color: #f0f0f0;
+    border: 2px solid #ffdd00;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.carrito-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100px;
+    border: 2px dashed #ccc;
+    background-color: #fff7cc;
+    border-radius: 10px;
+}
+
+.carrito img {
+    max-width: 100px;
+    margin: 10px;
+}
